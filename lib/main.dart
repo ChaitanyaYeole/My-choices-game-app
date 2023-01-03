@@ -52,45 +52,52 @@ class _MakeChoicesState extends State<MakeChoices> {
       children: [
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(9.0),
+            padding: const EdgeInsets.all(40.0),
             child: Center(
               child: Text(
                 storyBrain.getStoryText(),
                 style: const TextStyle(
                   color: Colors.white,
+                  fontSize: 18,
                 ),
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.justify,
               ),
             ),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 0.9),
-          child: TextButton(
-            onPressed: () => nextStory(true),
-            style: const ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(Colors.green),
-            ),
-            child: Text(
-              storyBrain.getStoryChoice1(),
-              style: const TextStyle(
-                color: Colors.white,
-              ),
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 9.0),
-          child: Visibility(
-            visible: storyBrain.getVisibilty(),
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          child: SizedBox(
+            width: double.infinity,
             child: TextButton(
-              onPressed: () => nextStory(false),
+              onPressed: () => nextStory(true),
               style: const ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(Colors.red),
+                backgroundColor: MaterialStatePropertyAll(Colors.green),
               ),
               child: Text(
-                storyBrain.getStoryChoice2(),
-                style: const TextStyle(color: Colors.white),
+                storyBrain.getStoryChoice1(),
+                style: const TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          child: Visibility(
+            visible: storyBrain.getVisibilty(),
+            child: SizedBox(
+              width: double.infinity,
+              child: TextButton(
+                onPressed: () => nextStory(false),
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Colors.red),
+                ),
+                child: Text(
+                  storyBrain.getStoryChoice2(),
+                  style: const TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ),
