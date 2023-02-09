@@ -1,3 +1,4 @@
+![mychoiceapp banner](https://user-images.githubusercontent.com/69446108/217693013-9b3b9bd1-7907-46f1-bd55-c42048dac161.png)
 
 # My choice app
 This is a flutter project which can be used at multiple platforms applications like Android app, Mac app and web-based applications.
@@ -6,6 +7,9 @@ This app just a simple QNA game and that can be expandable as per need.
 
 
 ## User Interface
+
+[Mychoiceapp.webm](https://user-images.githubusercontent.com/69446108/217692979-cfff9000-65ec-45ca-91e5-e791c64c6f40.webm)
+
 ## Learnings throughout project
 
 - Modularising your code into separate classes.
